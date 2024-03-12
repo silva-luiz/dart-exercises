@@ -10,6 +10,8 @@ void main() {
     'Luiz Henrique'
   ]; // <dynamic> para indicar que a lista recebe diversos tipos de objeto
 
+  print(me);
+
   List<String> sobrinhos = familia.sublist(2);
   print(sobrinhos);
 
@@ -33,5 +35,6 @@ void main() {
 
   Iterable maior = familia.where((element) =>
       element.length >= 5); // where nao retorna uma lista, retorna um Iterable
-  print("Nomes com 5 letras ou mais: ${maior.toList()}"); //toList() pode ser usado caso queira converter o Iterable para List
+  print(
+      "Nomes com 5 letras ou mais: ${maior.toList()}"); //toList() pode ser usado caso queira converter o Iterable para List
 }
