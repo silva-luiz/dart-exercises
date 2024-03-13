@@ -1,6 +1,6 @@
 class SenderIdInvalidException implements Exception {
   // Propriedades
-  String report = "SenderIdInvalidException";
+  static const String report = "SenderIdInvalidException";
   String idSender;
 
   @override
@@ -13,7 +13,7 @@ class SenderIdInvalidException implements Exception {
 }
 
 class ReceiverIdInvalidException implements Exception {
-  String report = "ReceiverIdInvalidException";
+  static const String report = "ReceiverIdInvalidException";
   String idReceiver;
 
   @override
@@ -25,7 +25,7 @@ class ReceiverIdInvalidException implements Exception {
 }
 
 class SenderNotAuthenticatedException implements Exception {
-  String report = "SenderNotAuthenticatedException";
+  static const String report = "SenderNotAuthenticatedException";
   String idSender;
 
   @override
@@ -37,11 +37,11 @@ class SenderNotAuthenticatedException implements Exception {
 }
 
 class SenderBalanceLowerThanAmountException implements Exception {
+  static const String report = "SenderBalanceLowerThanAmountException";
   String idSender;
   double senderBalance;
   double amount;
-  String report = "SenderBalanceLowerThanAmountException";
-
+  
   @override
   String toString() {
     return "$report\nID Sender: $idSender";
