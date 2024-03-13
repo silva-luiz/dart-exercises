@@ -9,7 +9,7 @@ class TimeQuestions{
   String year = 'Em que ano estamos?';
   String question;
   DateTime date = DateTime.now();
-  String kakoBot = 'KakoBOT:\n';
+  String shacoBot = 'SHACOBOT:\n';
   bool isThisATimeQuestion = false;
 
   TimeQuestions(this.question);
@@ -31,15 +31,15 @@ class TimeQuestions{
 
     if (question == hour) {
 
-      String _botAnswer = kakoBot + ' Opa! são : ${date.hour} horas e ${date.minute} minutos!';
+      String _botAnswer = shacoBot + ' Opa! são : ${date.hour} horas e ${date.minute} minutos!';
       print(_botAnswer);
     } else if (question == day) {
 
-      String _botAnswer = kakoBot + ' Opa! hoje é dia : ${date.day}';
+      String _botAnswer = shacoBot + ' Opa! hoje é dia : ${date.day}';
       print(_botAnswer);
     } else if (question == year) {
 
-      String _botAnswer = kakoBot + ' Opa! estamos em : ${date.year}';
+      String _botAnswer = shacoBot + ' Opa! estamos em : ${date.year}';
       print(_botAnswer);
     } else {
       unsure();
@@ -50,48 +50,48 @@ class TimeQuestions{
     if (question.contains('horas') || question.contains('Horas')) {
 
       String _botQuestion =
-          kakoBot + ' Não entendi, você quer saber das horas?';
+          shacoBot + ' Não entendi, você quer saber das horas?';
       print(_botQuestion);
       String answer = stdin.readLineSync().toString();
       if (answer.contains('Sim') || answer.contains('sim')) {
 
-        String _botAnswer = kakoBot + ' Beleza, são : ${date.hour} horas e ${date.minute} minutos!';
+        String _botAnswer = shacoBot + ' Beleza, são : ${date.hour} horas e ${date.minute} minutos!';
         print(_botAnswer);
       } else {
 
-        String _botAnswer = kakoBot + ' Ah, foi mal... entendi errado.';
+        String _botAnswer = shacoBot + ' Ah, foi mal... entendi errado.';
         print(_botAnswer);
       }
     } else if (question.contains('dia') || question.contains('Dia')) {
 
       String _botQuestion =
-          kakoBot + ' Não entendi, você quer saber que dia é hoje?';
+          shacoBot + ' Não entendi, você quer saber que dia é hoje?';
       print(_botQuestion);
       String answer = stdin.readLineSync().toString();
       if (answer.contains('Sim') || answer.contains('sim')) {
 
-        String _botAnswer = kakoBot + ' Beleza, hoje é dia: ${date.day}';
+        String _botAnswer = shacoBot + ' Beleza, hoje é dia: ${date.day}';
         print(_botAnswer);
       } else {
 
-        String _botAnswer = kakoBot + ' Ah, foi mal... entendi errado.';
+        String _botAnswer = shacoBot + ' Ah, foi mal... entendi errado.';
         print(_botAnswer);
       }
     } else if (question.contains('ano') || question.contains('Ano')) {
 
       String _botQuestion =
-          kakoBot + ' Não entendi, você quer saber em que ano estamos?';
+          shacoBot + ' Não entendi, você quer saber em que ano estamos?';
       print(_botQuestion);
       String answer = stdin.readLineSync().toString();
       if (answer.contains('Sim') || answer.contains('sim')) {
 
-        String _botAnswer = kakoBot +
+        String _botAnswer = shacoBot +
             ' Beleza, estamos no ano de 2077, a pandemia já está terminando... \n '
                 'Brincadeirinha! estamos em : ${date.year}';
         print(_botAnswer);
       } else {
 
-        String _botAnswer = kakoBot + ' Ah, foi mal... entendi errado.';
+        String _botAnswer = shacoBot + ' Ah, foi mal... entendi errado.';
         print(_botAnswer);
       }
     }
