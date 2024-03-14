@@ -86,8 +86,8 @@ class TimeQuestions{
       if (answer.contains('Sim') || answer.contains('sim')) {
 
         String _botAnswer = shacoBot +
-            ' Beleza, estamos no ano de 2077, a pandemia já está terminando... \n '
-                'Brincadeirinha! estamos em : ${date.year}';
+            ' Beleza, estamos no ano de 2077, e voce continua no BRONZE HAHAH!!!!. \n '
+                'Brinkss!! estamos em : ${date.year}';
         print(_botAnswer);
       } else {
 
